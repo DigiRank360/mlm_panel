@@ -3,9 +3,9 @@ import { MLMContext } from './mlmContextStore'
 import { api, clearAccessToken, getAccessToken, setAccessToken } from '../lib/api'
 
 const packageNames = {
-  starter: 'Starter Wellness',
-  growth: 'Growth Plus',
-  elite: 'Elite Business',
+  starter: 'Sugar Wellness Combo',
+  growth: 'Sexual Wellness Combo',
+  elite: 'Sugar Wellness Jumbo Pack',
 }
 
 function formatDate(value) {
@@ -289,7 +289,7 @@ export function MLMProvider({ children }) {
         key: config.keyId,
         amount: order.amount,
         currency: order.currency,
-        name: 'AyurvaPro',
+        name: 'AyuvaPro',
         description: `${order.packageName} membership`,
         order_id: order.orderId,
         prefill: { name: activeMember.name, email: activeMember.email, contact: activeMember.phone },

@@ -1,35 +1,33 @@
-# AyurvaPro MLM Member Portal
+# AyuvaPro MLM Member Portal
 
-A responsive React/Vite frontend prototype for an MLM member portal. It includes business overview, binary placement network, member registration, commissions, orders, withdrawals, marketing tools, and profile settings.
+The member portal uses the AyuvaPro backend for member login, registration, package details, referrals, payments, profile information and other member data. Registration creates a pending member account; payment verification and administrator approval control activation.
 
-## Run locally
+## Local development
+
+Run the backend, then start the panel:
 
 ```sh
 npm install
 npm run dev
 ```
 
-## Project layout
+The Vite development server uses `http://localhost:5174` so it can run beside the storefront on its default port. The panel API defaults to `http://localhost:5000/api`, while the backend server defaults to port `3000`; set `VITE_API_URL=http://localhost:3000/api` in both the panel and storefront if you are using the backend's default port. Otherwise set it to the backend API URL in each app's deployment environment.
 
-```text
-src/
-  components/
-    common/       Shared portal UI
-    network/      Binary tree, member table, add-member form and styles
-  context/        Shared MLM member state and hook
-  data/           Demo members, commissions, orders and chart values
-  pages/          Overview, network, commissions, orders, withdrawals,
-                  marketing and settings screens
-  App.jsx         Navigation shell and page composition
+## Storefront integration
+
+The storefront's Refer & Earn page sends visitors to this portal:
+
+- `/?register=true` opens member registration.
+- `/?register=true&ref=MEMBER_CODE` opens registration with the referring member selected.
+- `/` opens member sign-in.
+
+Set `VITE_MLM_PANEL_URL` in the storefront's deployment environment to this portal's deployed base URL. Set `VITE_API_URL` in this panel's deployment environment to the deployed backend API URL. Add both deployed frontend origins to the backend's `CORS_ALLOWED_ORIGINS` comma-separated environment setting. Keep these values as deployment configuration rather than committing environment-specific URLs.
+
+Referral links in the portal use the signed-in member's member code. Share only the generated portal referral link so sponsor attribution is retained.
+
+## Checks
+
+```sh
+npm run lint
+npm run build
 ```
-
-## Frontend demo notes
-
-- Share the personal referral URL from **Marketing tools**. It opens registration with the sponsor already selected.
-- New accounts choose an open binary position and a package. The package order and personal PV are attached to that member.
-- Members sign in with their own email and password. A referral signup creates credentials and starts that member's session; signing out returns to the login screen.
-- Seeded demo logins use `riya.kapoor@example.com` / `Riya@123`, `aarav.sharma@example.com` / `Aarav@123`, `meera.iyer@example.com` / `Meera@123`, `kabir.patel@example.com` / `Kabir@123`, and `ananya.reddy@example.com` / `Ananya@123`.
-- Account data is saved in local storage and the signed-in member ID in session storage. Passwords are hashed in this prototype, but browser-side data and checks are not a security boundary.
-- Package enrollment does not process payment. Production isolation requires server-side authentication, authorization on every API, protected database storage, bank payout integration, and the approved compensation-plan rules.
-
-Run `npm run lint` and `npm run build` to check the project.

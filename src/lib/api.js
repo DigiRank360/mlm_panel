@@ -37,6 +37,9 @@ function jsonBody(value) {
 export const api = {
   login: (email, password) => request('/users/login', { method: 'POST', body: jsonBody({ email, password }) }),
   register: (details) => request('/mlm/register', { method: 'POST', body: jsonBody(details) }),
+  getRegistrationConfig: () => request('/mlm/register/config'),
+  sendRegistrationOtp: (phone) => request('/mlm/register/otp/send', { method: 'POST', body: jsonBody({ phone }) }),
+  verifyRegistrationOtp: (phone, code) => request('/mlm/register/otp/verify', { method: 'POST', body: jsonBody({ phone, code }) }),
   getPackages: () => request('/mlm/packages'),
   getReferralPlacements: (memberCode) => request(`/mlm/referrals/${encodeURIComponent(memberCode)}/placements`),
   getProfile: () => request('/users/profile'),
