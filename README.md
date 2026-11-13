@@ -11,7 +11,7 @@ npm install
 npm run dev
 ```
 
-The Vite development server uses `http://localhost:5174` so it can run beside the storefront on its default port. The panel API defaults to `http://localhost:5000/api`, while the backend server defaults to port `3000`; set `VITE_API_URL=http://localhost:3000/api` in both the panel and storefront if you are using the backend's default port. Otherwise set it to the backend API URL in each app's deployment environment.
+The Vite development server uses the fixed port `3003` (and exits if that port is already in use). The storefront uses `http://localhost:3001` and the admin dashboard uses `http://localhost:3002`. The panel API defaults to the local backend at `http://localhost:5000/api`; set `VITE_API_URL` in the panel and storefront only if your backend uses a different URL.
 
 ## Storefront integration
 

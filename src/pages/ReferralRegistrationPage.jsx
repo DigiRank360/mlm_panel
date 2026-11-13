@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
-import { ArrowLeft, ArrowRight, BadgeCheck, Building2, Check, KeyRound, Landmark, Leaf, Lock, ShieldCheck, UserCheck, UserRound } from 'lucide-react'
+import { ArrowLeft, ArrowRight, BadgeCheck, Building2, Check, KeyRound, Landmark, Lock, ShieldCheck, UserCheck, UserRound } from 'lucide-react'
 import PasswordField from '../components/common/PasswordField'
 import { api } from '../lib/api'
+import logo from '../assets/ayurvapro-logo.png'
 import './registration.css'
 import './partner-application.css'
 
@@ -258,7 +259,29 @@ export default function ReferralRegistrationPage({ referralId, onRegister, onToa
   const isLast = step === STEPS.length - 1
 
   return <main className="pa-page">
-    <header className="pa-topbar"><span className="brand-mark"><Leaf size={19} /></span><strong>ayurva<span>pro</span></strong><small>MEMBER REGISTRATION</small></header>
+    <aside className="pa-story" aria-label="About the AyurvaPro partner programme">
+      <a className="pa-story-brand" href="/" aria-label="AyurvaPro member portal home">
+        <img src={logo} alt="AyurvaPro" />
+        <span>MEMBER PORTAL</span>
+      </a>
+      <div className="pa-story-copy">
+        <p className="pa-story-kicker"><BadgeCheck size={15} /> YOUR NEXT STEP STARTS HERE</p>
+        <h1>Make wellness part of your journey.</h1>
+        <p>Join the AyurvaPro community with a guided application designed to make getting started clear and simple.</p>
+        <ul>
+          <li><span><UserCheck size={17} /></span><div><strong>A guided application</strong><small>Complete your profile one step at a time.</small></div></li>
+          <li><span><ShieldCheck size={17} /></span><div><strong>Clear account setup</strong><small>Review your details before you submit.</small></div></li>
+        </ul>
+      </div>
+      <p className="pa-story-footer">Ancient wisdom. Modern wellness.</p>
+    </aside>
+    <header className="pa-topbar">
+      <a className="auth-brand" href="/" aria-label="AyurvaPro member portal home">
+        <img src={logo} alt="AyurvaPro" />
+        <span>MEMBER PORTAL</span>
+      </a>
+      <span className="pa-topbar-label">PARTNER REGISTRATION</span>
+    </header>
     <div className="pa-card">
       <div className="pa-banner">
         <div className="pa-banner-top">
