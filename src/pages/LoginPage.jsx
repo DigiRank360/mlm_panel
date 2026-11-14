@@ -64,6 +64,7 @@ export default function LoginPage({ onLogin, onToast }) {
           </button>
         </form>
         <p className="login-register">New to AyurvaPro? <a href="/?register=true">Create a member account <ArrowRight size={14} /></a></p>
+        <p className="login-register affiliate-login-link">Affiliate partner? <a href="/affiliate">Open the affiliate workspace <ArrowRight size={14} /></a></p>
       </div>
       <p className="login-privacy"><ShieldCheck size={14} /> Your account is protected by secure authentication.</p>
     </section>

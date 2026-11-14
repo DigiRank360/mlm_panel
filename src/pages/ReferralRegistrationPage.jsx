@@ -280,15 +280,15 @@ export default function ReferralRegistrationPage({ referralId, onRegister, onToa
         <img src={logo} alt="AyurvaPro" />
         <span>MEMBER PORTAL</span>
       </a>
-      <span className="pa-topbar-label">PARTNER REGISTRATION</span>
+      <span className="pa-topbar-label">MLM MEMBER REGISTRATION</span>
     </header>
     <div className="pa-card">
       <div className="pa-banner">
         <div className="pa-banner-top">
           <div>
-            <p className="pa-eyebrow">Official registration</p>
-            <h1>Partner Application &amp; Onboarding Portal</h1>
-            <p className="pa-sub">{hasSponsorInvite ? `Invited by ${referral?.sponsor.name} · ${referral?.sponsor.memberCode}` : 'Submit your details to activate verified referral credentials.'}</p>
+            <p className="pa-eyebrow">MLM member registration</p>
+            <h1>MLM Member Application &amp; Onboarding</h1>
+            <p className="pa-sub">{hasSponsorInvite ? `Invited by ${referral?.sponsor.name} · ${referral?.sponsor.memberCode}` : 'Register for the MLM member programme. Affiliate applications use a separate workspace.'}</p>
           </div>
           <UserCheck className="pa-banner-icon" size={30} aria-hidden="true" />
         </div>
@@ -429,6 +429,7 @@ export default function ReferralRegistrationPage({ referralId, onRegister, onToa
             </div>
           </footer>
           <p className="pa-signin">Already registered? <a href="/">Sign in</a></p>
+          <p className="pa-signin">Looking to apply for the affiliate programme? <a href="/affiliate">Open the affiliate workspace</a></p>
         </form>}
     </div>
   </main>

@@ -1,0 +1,304 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [5 0 R 7 0 R 9 0 R 11 0 R 13 0 R 15 0 R] /Count 6 >>
+endobj
+3 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 6 0 R /Annots [17 0 R 18 0 R 19 0 R] >>
+endobj
+6 0 obj
+<< /Length 3109 >>
+stream
+q
+0.07 0.23 0.18 rg
+0 748 612 44 re f
+Q
+BT /F2 13 Tf 1 1 1 rg 48 763 Td (AYUVAPRO PARTNER OPERATIONS) Tj ET
+BT /F1 8 Tf 0.88 0.94 0.90 rg 427 763 Td (WORKFLOW GUIDE - 2026) Tj ET
+BT /F2 21 Tf 0.10 0.27 0.21 rg 50 710 Td (AyurvaPro Partner Dashboards) Tj ET
+BT /F1 12 Tf 0.31 0.40 0.35 rg 50 677 Td (Admin, Affiliate, and MLM step-by-step operating guide) Tj ET
+q 0.99 0.97 0.91 rg 43 653 526 40 re f Q
+BT /F1 9 Tf 0.35 0.29 0.15 rg 50 655 Td (Important: Affiliate and MLM are separate programmes. They share the customer account ecosystem, but) Tj ET
+BT /F1 9 Tf 0.35 0.29 0.15 rg 50 642 Td (have different enrollment forms, IDs, packages, rules, approvals, and dashboards. Do not treat MLM) Tj ET
+BT /F1 9 Tf 0.35 0.29 0.15 rg 50 629 Td (registration as affiliate enrollment.) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 608 Td (Quick map) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 585 Td (  1. Admin prepares and activates an approved affiliate policy, then publishes approved affiliate) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 572 Td (package versions and commission rules.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 557 Td (  2. An affiliate applicant signs in with phone OTP, submits the affiliate application, selects a) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 544 Td (published package, and completes secure payment.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 529 Td (  3. An authorized affiliate manager reviews risk. After payment and all eligibility checks pass,) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 516 Td (the affiliate workspace becomes active.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 501 Td (  4. A separate MLM applicant registers at /?register=true, selects an MLM package, pays, and waits) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 488 Td (for MLM payment review/activation.) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 470 Td (What this guide covers) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 447 Td (How to operate the admin approval controls, which dashboard is for which user, what each visible) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 433 Td (status means, and how to diagnose blocked or pending steps.) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 417 Td (This guide describes the application behavior in the repository. It does not provide legal approval,) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 403 Td (business policy values, live payment credentials, or a claim that a real transaction was tested.) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 370 Td (Open your dashboard) Tj ET
+BT /F2 10.5 Tf 0.16 0.36 0.28 rg 50 345 Td (Admin dashboard: admin.ayuvapro.com) Tj ET
+BT /F2 10.5 Tf 0.16 0.36 0.28 rg 50 323 Td (Affiliate workspace: mlm.ayuvapro.com/affiliate) Tj ET
+BT /F2 10.5 Tf 0.16 0.36 0.28 rg 50 301 Td (MLM member dashboard: mlm.ayuvapro.com) Tj ET
+BT /F1 8.5 Tf 0.40 0.48 0.43 rg 50 280 Td (Click a link to open the portal; sign in using your authorized account.) Tj ET
+q 0.82 0.87 0.83 RG 48 39 m 564 39 l S Q
+BT /F1 8 Tf 0.48 0.55 0.50 rg 48 24 Td (AyurvaPro | Use approved values and environment-specific credentials only) Tj ET
+BT /F1 8 Tf 0.48 0.55 0.50 rg 533 24 Td (1 / 6) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 8 0 R >>
+endobj
+8 0 obj
+<< /Length 3507 >>
+stream
+q
+0.07 0.23 0.18 rg
+0 748 612 44 re f
+Q
+BT /F2 13 Tf 1 1 1 rg 48 763 Td (AYUVAPRO PARTNER OPERATIONS) Tj ET
+BT /F1 8 Tf 0.88 0.94 0.90 rg 427 763 Td (WORKFLOW GUIDE - 2026) Tj ET
+BT /F2 21 Tf 0.10 0.27 0.21 rg 50 710 Td (1. Admin: prepare affiliate enrollment) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 674 Td (Access and permissions) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 651 Td (  1. Sign in to the AyurvaPro admin application with an authorized admin account. Privileged) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 638 Td (affiliate operations require a verified MFA session.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 623 Td (  2. Open Affiliate Programme. This page shows the current active policy and up to 50 policy) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 610 Td (versions/drafts.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 595 Td (  3. Enter a reason and create a draft. Draft creation does not change customer enrollment.) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 577 Td (Complete the policy draft) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 554 Td (Enter only values approved by the business, finance, and legal owners: attribution window/mode;) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 540 Td (visitor uniqueness; video watch threshold; daily-cap rule; renewal and tier rules; reward-window) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 526 Td (convention; commission base; refund treatment; payout minimum/currency; self-referral handling; and) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 512 Td (current agreement, terms, privacy, support, referral, and KYC consent versions.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 496 Td (  4. Keep Open the affiliate programme off while approvals, customer documents, packages, payment) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 483 Td (configuration, or operational readiness are incomplete.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 468 Td (  5. Record the genuine Legal/Finance approval reference\(s\), and the reason for the change. Save the) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 455 Td (draft and review the values and reference IDs.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 440 Td (  6. Activate the approved version. If Open is enabled, new affiliate applications become available.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 427 Td (If disabled, the version is active but enrollment stays closed.) Tj ET
+q 0.99 0.97 0.91 rg 43 407 526 40 re f Q
+BT /F1 9 Tf 0.35 0.29 0.15 rg 50 409 Td (The backend verifies that required values and at least one approval reference are present. It does) Tj ET
+BT /F1 9 Tf 0.35 0.29 0.15 rg 50 396 Td (NOT verify the external approval document or guarantee an independent maker-checker approval. Never) Tj ET
+BT /F1 9 Tf 0.35 0.29 0.15 rg 50 383 Td (use placeholder references or unapproved policy values.) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 362 Td (Where to go next) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 339 Td (Use Affiliate Packages to create and activate approved product package versions. Use Affiliate) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 325 Td (Commission Rules with a finance-authorized, MFA-verified account to create and activate a rate based) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 311 Td (on the active policy. No package price or commission rate is pre-approved by this UI.) Tj ET
+q 0.82 0.87 0.83 RG 48 39 m 564 39 l S Q
+BT /F1 8 Tf 0.48 0.55 0.50 rg 48 24 Td (AyurvaPro | Use approved values and environment-specific credentials only) Tj ET
+BT /F1 8 Tf 0.48 0.55 0.50 rg 533 24 Td (2 / 6) Tj ET
+endstream
+endobj
+9 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 10 0 R >>
+endobj
+10 0 obj
+<< /Length 3669 >>
+stream
+q
+0.07 0.23 0.18 rg
+0 748 612 44 re f
+Q
+BT /F2 13 Tf 1 1 1 rg 48 763 Td (AYUVAPRO PARTNER OPERATIONS) Tj ET
+BT /F1 8 Tf 0.88 0.94 0.90 rg 427 763 Td (WORKFLOW GUIDE - 2026) Tj ET
+BT /F2 21 Tf 0.10 0.27 0.21 rg 50 710 Td (2. Admin: operate affiliate approvals) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 677 Td (  1. In Affiliate Packages, choose only active products, enter the approved tier, duration, MRP,) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 664 Td (reward settings, support entitlement, effective date, and change reason. Save creates an inactive) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 651 Td (draft.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 636 Td (  2. Review product allocation, quantities, displayed price, effective date, and approval basis.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 623 Td (Activate the intended version. Activation replaces the previous active version for that package) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 610 Td (tier.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 595 Td (  3. In Affiliate Commission Rules, enter the approved rate, matching commission base, settlement) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 582 Td (days, package tier, effective date, and a reason/reference. Save creates an inactive rule;) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 569 Td (activate it after review.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 554 Td (  4. Open Affiliate Reviews. Review applicant identity/profile and current status. Enter a) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 541 Td (meaningful reason, then choose Clear review, Keep under review, or Block affiliate.) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 526 Td (Clearing risk before payment records the review decision but does not activate the account by) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 512 Td (itself. If a valid package payment already exists, clearing risk can trigger activation after the) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 498 Td (server checks verified phone, accepted current consents, completed profile, and risk status.) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 479 Td (MLM administration is separate) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 456 Td (  5. Use MLM Payments to review a captured MLM package payment. Approve and activate only after) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 443 Td (review; rejection follows the configured refund path.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 428 Td (  6. Use MLM KYC to review submitted MLM identity documents. Download documents only for authorized) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 415 Td (review, then approve or reject with an appropriate reason.) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 397 Td (Affiliate finance and compliance) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 374 Td (The backend also exposes finance/manager-protected affiliate queues for KYC, commissions, payout) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 360 Td (methods, payouts, video rewards, and reporting. Where the admin frontend has no dedicated screen,) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 346 Td (use an authorized, audited integration rather than assuming an approval occurred.) Tj ET
+q 0.99 0.97 0.91 rg 43 325 526 40 re f Q
+BT /F1 9 Tf 0.35 0.29 0.15 rg 50 327 Td (Affiliate Reviews is risk review, not legal approval and not package-payment approval. Do not clear) Tj ET
+BT /F1 9 Tf 0.35 0.29 0.15 rg 50 314 Td (risk as a substitute for customer payment, current consent, or required KYC.) Tj ET
+q 0.82 0.87 0.83 RG 48 39 m 564 39 l S Q
+BT /F1 8 Tf 0.48 0.55 0.50 rg 48 24 Td (AyurvaPro | Use approved values and environment-specific credentials only) Tj ET
+BT /F1 8 Tf 0.48 0.55 0.50 rg 533 24 Td (3 / 6) Tj ET
+endstream
+endobj
+11 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 12 0 R >>
+endobj
+12 0 obj
+<< /Length 3025 >>
+stream
+q
+0.07 0.23 0.18 rg
+0 748 612 44 re f
+Q
+BT /F2 13 Tf 1 1 1 rg 48 763 Td (AYUVAPRO PARTNER OPERATIONS) Tj ET
+BT /F1 8 Tf 0.88 0.94 0.90 rg 427 763 Td (WORKFLOW GUIDE - 2026) Tj ET
+BT /F2 21 Tf 0.10 0.27 0.21 rg 50 710 Td (3. Customer: apply as an affiliate) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 677 Td (  1. Open /affiliate. Choose Create account for a new AyurvaPro customer, or use Email & password /) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 664 Td (Phone OTP for an existing customer account. Verify the phone code.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 649 Td (  2. Complete the affiliate application with legal name, date of birth, address, and phone) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 636 Td (verification. Review and accept the current official agreement, terms, and privacy versions.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 621 Td (  3. Submit the application. If program settings are enabled and valid, the profile is created as) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 608 Td (PENDING_PAYMENT and an Affiliate ID is issued. Account creation alone does not issue an Affiliate) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 595 Td (ID.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 580 Td (  4. Choose an active affiliate package, enter a delivery address, and continue to Razorpay) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 567 Td (checkout. The server validates package availability, price allocation, stock, and payment status.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 552 Td (  5. Wait for risk review if required. The dashboard becomes an active affiliate workspace only when) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 539 Td (payment and all activation checks pass. Use refresh to check updated server status.) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 521 Td (After activation) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 498 Td (Use Overview for status and earnings; Referral links to create/share links and QR codes; Activity) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 484 Td (for referral events; Earnings & payouts for ledger balances and payout requests; KYC verification) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 470 Td (for affiliate KYC; Support sessions to book eligible support; Notifications for updates; Profile to) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 456 Td (review partner identity and Affiliate ID.) Tj ET
+q 0.99 0.97 0.91 rg 43 435 526 40 re f Q
+BT /F1 9 Tf 0.35 0.29 0.15 rg 50 437 Td (If the page says applications are closed, no application was submitted and no Affiliate ID was) Tj ET
+BT /F1 9 Tf 0.35 0.29 0.15 rg 50 424 Td (issued. An admin must activate a complete policy with enrollment enabled and make required) Tj ET
+BT /F1 9 Tf 0.35 0.29 0.15 rg 50 411 Td (package/configuration settings ready. Do not retry MLM registration as an affiliate workaround.) Tj ET
+q 0.82 0.87 0.83 RG 48 39 m 564 39 l S Q
+BT /F1 8 Tf 0.48 0.55 0.50 rg 48 24 Td (AyurvaPro | Use approved values and environment-specific credentials only) Tj ET
+BT /F1 8 Tf 0.48 0.55 0.50 rg 533 24 Td (4 / 6) Tj ET
+endstream
+endobj
+13 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 14 0 R >>
+endobj
+14 0 obj
+<< /Length 3119 >>
+stream
+q
+0.07 0.23 0.18 rg
+0 748 612 44 re f
+Q
+BT /F2 13 Tf 1 1 1 rg 48 763 Td (AYUVAPRO PARTNER OPERATIONS) Tj ET
+BT /F1 8 Tf 0.88 0.94 0.90 rg 427 763 Td (WORKFLOW GUIDE - 2026) Tj ET
+BT /F2 21 Tf 0.10 0.27 0.21 rg 50 710 Td (4. Customer: use the MLM member dashboard) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 677 Td (  1. Open /?register=true for MLM member registration. The registration page is labelled MLM Member) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 664 Td (Application and is not the affiliate application.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 649 Td (  2. Enter profile/contact details, complete OTP verification if enabled, choose a listed MLM) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 636 Td (package, provide sponsor/placement details when applicable, accept required undertakings, and) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 623 Td (create the MLM account credentials.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 608 Td (  3. Complete the package payment flow. The member dashboard shows Activation pending until) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 595 Td (payment/admin verification is complete. Use the member code when contacting support.) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 580 Td (  4. Admin reviews the captured MLM package payment in MLM Payments. The member checks activation) Tj ET
+BT /F1 9.2 Tf 0.16 0.20 0.18 rg 50 567 Td (status in the member portal. Submit MLM KYC separately if required.) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 549 Td (MLM dashboard areas) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 526 Td (Overview summarizes member earnings, team, volume, and current activity. My network shows) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 512 Td (downline/placement details. Commissions, Orders, My package, Withdrawals, KYC verification,) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 498 Td (Marketing tools, and Settings are member functions. Values remain subject to the backend) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 484 Td (eligibility, payout, and KYC rules.) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 468 Td (Use Open affiliate workspace from the member portal only if you separately want to apply for the) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 454 Td (affiliate programme. Use Back to MLM dashboard from the affiliate workspace to return. Tokens are) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 440 Td (stored separately by portal; signing into one does not enroll the user in the other.) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 421 Td (Statuses are not interchangeable) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 398 Td (An MLM member code is not an Affiliate ID. MLM payment approval does not approve an affiliate) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 384 Td (application. Affiliate package payment does not approve MLM membership. Each portal has its own) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 370 Td (enrollment, payment and review status.) Tj ET
+q 0.82 0.87 0.83 RG 48 39 m 564 39 l S Q
+BT /F1 8 Tf 0.48 0.55 0.50 rg 48 24 Td (AyurvaPro | Use approved values and environment-specific credentials only) Tj ET
+BT /F1 8 Tf 0.48 0.55 0.50 rg 533 24 Td (5 / 6) Tj ET
+endstream
+endobj
+15 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 3 0 R /F2 4 0 R >> >> /Contents 16 0 R >>
+endobj
+16 0 obj
+<< /Length 4169 >>
+stream
+q
+0.07 0.23 0.18 rg
+0 748 612 44 re f
+Q
+BT /F2 13 Tf 1 1 1 rg 48 763 Td (AYUVAPRO PARTNER OPERATIONS) Tj ET
+BT /F1 8 Tf 0.88 0.94 0.90 rg 427 763 Td (WORKFLOW GUIDE - 2026) Tj ET
+BT /F2 21 Tf 0.10 0.27 0.21 rg 50 710 Td (5. Troubleshooting and readiness) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 674 Td (Common states) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 651 Td (- Affiliate applications closed: no complete enabled active policy. Admin reviews approvals and) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 638 Td (activates the appropriate version.) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 623 Td (- Affiliate application submitted / PENDING_PAYMENT: choose an active affiliate package and) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 610 Td (complete checkout; wait for payment confirmation and risk clearance.) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 595 Td (- Affiliate payment complete but still pending: check Affiliate Reviews and confirm profile,) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 582 Td (verified phone, current consent, active config, and package eligibility.) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 567 Td (- Commission not appearing: verify an active policy, active commission rule for that package) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 554 Td (tier, referral attribution, payment/settlement state, and review/hold status.) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 539 Td (- MLM activation pending: use the member code and ask an authorized admin to review the) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 526 Td (captured payment; do not make a duplicate registration to bypass review.) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 511 Td (- Admin receives 403: check assigned role \(affiliate_manager, finance_operator, or super_admin) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 498 Td (as appropriate\) and complete MFA. Admin access is not equivalent to every finance role.) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 480 Td (Before opening to customers) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 457 Td (- Obtain and record real written policy/legal/finance approvals and publish the referenced) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 444 Td (customer-facing documents.) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 429 Td (- Activate only approved affiliate package versions; verify the Razorpay account/webhooks and) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 416 Td (inventory setup in the correct environment.) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 401 Td (- Set up approved commission rules and ensure appropriate staff access, MFA, audit monitoring,) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 388 Td (KYC encryption/storage, and payout operations.) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 373 Td (- Test in a sandbox with authorized synthetic fixtures before production. This code validation) Tj ET
+BT /F1 9.1 Tf 0.16 0.20 0.18 rg 50 360 Td (did not perform a live payment or activate an unapproved business policy.) Tj ET
+BT /F2 13 Tf 0.16 0.36 0.28 rg 50 342 Td (Implementation validation note) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 319 Td (The admin and member/affiliate frontends build, touched admin files pass focused lint, and backend) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 305 Td (MLM/affiliate tests pass. An unrelated existing full-admin lint currently reports errors in other) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 291 Td (files. Production readiness still depends on approved policy values, real approval evidence,) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 277 Td (environment configuration, and end-to-end testing with authorized test accounts.) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 261 Td (Use the admin pages: Affiliate Programme, Affiliate Packages, Affiliate Commission Rules, Affiliate) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 247 Td (Reviews, MLM Payments, and MLM KYC. Use customer pages: /affiliate for affiliate and /?register=true) Tj ET
+BT /F1 9.5 Tf 0.22 0.27 0.24 rg 50 233 Td (for MLM.) Tj ET
+q 0.82 0.87 0.83 RG 48 39 m 564 39 l S Q
+BT /F1 8 Tf 0.48 0.55 0.50 rg 48 24 Td (AyurvaPro | Use approved values and environment-specific credentials only) Tj ET
+BT /F1 8 Tf 0.48 0.55 0.50 rg 533 24 Td (6 / 6) Tj ET
+endstream
+endobj
+17 0 obj
+<< /Type /Annot /Subtype /Link /Border [0 0 0] /Rect [48 340 335 358] /P 5 0 R /A << /S /URI /URI (https://admin.ayuvapro.com/) >> >>
+endobj
+18 0 obj
+<< /Type /Annot /Subtype /Link /Border [0 0 0] /Rect [48 318 410 336] /P 5 0 R /A << /S /URI /URI (https://mlm.ayuvapro.com/affiliate) >> >>
+endobj
+19 0 obj
+<< /Type /Annot /Subtype /Link /Border [0 0 0] /Rect [48 296 370 314] /P 5 0 R /A << /S /URI /URI (https://mlm.ayuvapro.com/) >> >>
+endobj
+xref
+0 20
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000154 00000 n 
+0000000224 00000 n 
+0000000299 00000 n 
+0000000466 00000 n 
+0000003627 00000 n 
+0000003763 00000 n 
+0000007322 00000 n 
+0000007459 00000 n 
+0000011181 00000 n 
+0000011319 00000 n 
+0000014397 00000 n 
+0000014535 00000 n 
+0000017707 00000 n 
+0000017845 00000 n 
+0000022067 00000 n 
+0000022217 00000 n 
+0000022374 00000 n 
+trailer
+<< /Size 20 /Root 1 0 R >>
+startxref
+22522
+%%EOF

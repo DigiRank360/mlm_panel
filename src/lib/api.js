@@ -1,16 +1,21 @@
 const API_BASE = (import.meta.env.VITE_API_URL || 'http://localhost:5000/api').replace(/\/$/, '')
-const TOKEN_KEY = 'ayurvapro-member-token'
+const MEMBER_TOKEN_KEY = 'ayurvapro-member-token'
+const AFFILIATE_TOKEN_KEY = 'ayurvapro-affiliate-token'
+
+function tokenStorageKey() {
+  return window.location.pathname.startsWith('/affiliate') ? AFFILIATE_TOKEN_KEY : MEMBER_TOKEN_KEY
+}
 
 export function getAccessToken() {
-  return localStorage.getItem(TOKEN_KEY)
+  return localStorage.getItem(tokenStorageKey())
 }
 
 export function setAccessToken(token) {
-  localStorage.setItem(TOKEN_KEY, token)
+  localStorage.setItem(tokenStorageKey(), token)
 }
 
 export function clearAccessToken() {
-  localStorage.removeItem(TOKEN_KEY)
+  localStorage.removeItem(tokenStorageKey())
 }
 
 async function request(path, options = {}) {
@@ -36,6 +41,43 @@ function jsonBody(value) {
 
 export const api = {
   login: (email, password) => request('/users/login', { method: 'POST', body: jsonBody({ email, password }) }),
+  sendPhoneOtp: (phone) => request('/users/send-otp', { method: 'POST', body: jsonBody({ phone }) }),
+  verifyPhoneOtp: (phone, otp) => request('/users/verify-otp', { method: 'POST', body: jsonBody({ phone, otp }) }),
+  getAffiliateProfileStatus: () => request('/affiliate/profile/status'),
+  getAffiliatePortalSettings: () => request('/affiliate/portal-settings'),
+  getAffiliatePackages: () => request('/affiliate/packages'),
+  enrollAffiliate: (details) => request('/affiliate/enroll', { method: 'POST', body: jsonBody(details) }),
+  createAffiliatePackageOrder: (packageId, shippingAddress, idempotencyKey) => request('/affiliate/packages/orders', {
+    method: 'POST',
+    headers: { 'Idempotency-Key': idempotencyKey },
+    body: jsonBody({ packageId, shippingAddress }),
+  }),
+  createPaymentOrder: (orderId) => request('/payment/create-order', { method: 'POST', body: jsonBody({ orderId }) }),
+  verifyPayment: (payment) => request('/payment/verify', { method: 'POST', body: jsonBody(payment) }),
+  getAffiliateDashboard: () => request('/affiliate/dashboard'),
+  getAffiliateActivity: (page = 1) => request(`/affiliate/activity?page=${page}&limit=25`),
+  createAffiliateLink: (details) => request('/affiliate/links', { method: 'POST', body: jsonBody(details) }),
+  getAffiliateKycStatus: () => request('/affiliate/kyc/status'),
+  submitAffiliateKyc: (formData) => request('/affiliate/kyc', { method: 'POST', body: formData }),
+  getAffiliatePayoutMethod: () => request('/affiliate/payout-method'),
+  setAffiliatePayoutMethod: (details) => request('/affiliate/payout-method', { method: 'PUT', body: jsonBody(details) }),
+  requestAffiliatePayout: (amount, idempotencyKey) => request('/affiliate/payouts', {
+    method: 'POST',
+    headers: { 'Idempotency-Key': idempotencyKey },
+    body: jsonBody({ amount }),
+  }),
+  getAffiliatePayouts: () => request('/affiliate/payouts'),
+  getAffiliateNotifications: () => request('/affiliate/notifications'),
+  markAffiliateNotificationRead: (notificationId) => request(`/affiliate/notifications/${encodeURIComponent(notificationId)}/read`, { method: 'PATCH' }),
+  getAffiliateSupportSessions: () => request('/affiliate/support/sessions'),
+  recordAffiliateConsent: (purpose, version, granted = true) => request('/affiliate/consents', {
+    method: 'POST',
+    body: jsonBody({ purpose, version, granted }),
+  }),
+  scheduleAffiliateSupport: (entitlementId, scheduledAt) => request('/affiliate/support/sessions', {
+    method: 'POST',
+    body: jsonBody({ entitlementId, scheduledAt }),
+  }),
   register: (details) => request('/mlm/register', { method: 'POST', body: jsonBody(details) }),
   getRegistrationConfig: () => request('/mlm/register/config'),
   sendRegistrationOtp: (phone) => request('/mlm/register/otp/send', { method: 'POST', body: jsonBody({ phone }) }),

@@ -37,6 +37,7 @@ import LoginPage from './pages/LoginPage'
 import SettingsPage from './pages/SettingsPage'
 import WithdrawalsPage from './pages/WithdrawalsPage'
 import KycPage from './pages/KycPage'
+import AffiliatePortal from './pages/AffiliatePortal'
 import './App.css'
 import './components/network/network.css'
 
@@ -169,7 +170,7 @@ function AppContent() {
         <nav className="side-nav" aria-label="Main navigation">
           {navigation.map(({ label, icon: Icon, section }) => <div key={label}>{section && <p className="nav-section-label">{section}</p>}<button className={`nav-item ${activePage === label ? 'nav-item-active' : ''}`} onClick={() => changePage(label)}><Icon size={18} strokeWidth={1.8} /><span>{label}</span>{label === 'My network' && <span className="nav-count">{teamMembers.length}</span>}</button></div>)}
         </nav>
-        <div className="sidebar-bottom"><div className="support-card"><span className="support-icon"><CircleHelp size={18} /></span><div><strong>Need a hand?</strong><small>We’re happy to help.</small></div><ChevronRight size={15} /></div><button className="signout-button" onClick={signOut}><LogOut size={17} /> Sign out</button><div className="sidebar-footnote">AYURVAPRO MEMBER PORTAL <span>v1.0.0</span></div></div>
+        <div className="sidebar-bottom"><a className="affiliate-workspace-link" href="/affiliate">Open affiliate workspace <ArrowRight size={15} /></a><div className="support-card"><span className="support-icon"><CircleHelp size={18} /></span><div><strong>Need a hand?</strong><small>We’re happy to help.</small></div><ChevronRight size={15} /></div><button className="signout-button" onClick={signOut}><LogOut size={17} /> Sign out</button><div className="sidebar-footnote">AYURVAPRO MEMBER PORTAL <span>v1.0.0</span></div></div>
       </aside>
 
       <main className="main-area">
@@ -196,5 +197,6 @@ function AppContent() {
 }
 
 export default function App() {
-  return <ToastProvider><MLMProvider><AppContent /></MLMProvider></ToastProvider>
+  const affiliateWorkspace = window.location.pathname.startsWith('/affiliate')
+  return <ToastProvider>{affiliateWorkspace ? <AffiliatePortal /> : <MLMProvider><AppContent /></MLMProvider>}</ToastProvider>
 }

@@ -255,6 +255,26 @@ select:focus-visible {
   margin-top: auto;
 }
 
+.affiliate-workspace-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 12px;
+  padding: 10px 11px;
+  border: 1px solid #e3ebe3;
+  border-radius: 8px;
+  color: #35664f;
+  background: #f3f7f2;
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.affiliate-workspace-link:hover {
+  border-color: #cbd9ce;
+  background: #ebf3ec;
+}
+
 .support-card {
   display: flex;
   align-items: center;
