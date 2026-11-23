@@ -140,40 +140,54 @@ function PortalLogin({ onLogin, onSendOtp, onVerifyOtp, onClearError, error, bus
 
   return <main className="affiliate-auth">
     <section className="affiliate-auth-card">
-      <a className="affiliate-logo" href="/" aria-label="AyurvaPro member portal"><img src={logo} alt="AyurvaPro" /><span>PARTNER PROGRAM</span></a>
-      <p className="affiliate-eyebrow">YOUR AFFILIATE WORKSPACE</p>
-      <h1>{isPhoneMode ? (mode === 'create' ? 'Create your account.' : 'Sign in with your phone.') : 'Grow with purpose.'}</h1>
-      <p className="affiliate-muted">{isPhoneMode
-        ? (mode === 'create' ? 'Create an AyurvaPro account with your mobile number, then continue to the affiliate application.' : 'We’ll text a one-time code to sign you in securely.')
-        : 'Sign in with your existing AyurvaPro email and password, or create an account with your mobile number.'}</p>
-      <div className="affiliate-auth-switch" role="group" aria-label="Choose sign-in option">
-        <button type="button" aria-pressed={mode === 'login'} className={mode === 'login' ? 'active' : ''} onClick={() => { setMode('login'); setLocalError(''); onClearError() }}>Email &amp; password</button>
-        <button type="button" aria-pressed={mode === 'create'} className={mode === 'create' ? 'active' : ''} onClick={() => { setMode('create'); setOtpSent(false); setOtp(''); setLocalError(''); onClearError() }}>Create account</button>
-        <button type="button" aria-pressed={mode === 'otp-login'} className={mode === 'otp-login' ? 'active' : ''} onClick={() => { setMode('otp-login'); setOtpSent(false); setOtp(''); setLocalError(''); onClearError() }}>Phone OTP</button>
-      </div>
-      {!isPhoneMode ? <form className="affiliate-form" onSubmit={(event) => { event.preventDefault(); onLogin(email.trim(), password) }}>
-        <label>Email address<input type="email" autoComplete="username" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@example.com" /></label>
-        <label>Password<input type="password" autoComplete="current-password" required value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Your password" /></label>
-        {(localError || error) && <p className="affiliate-error" role="alert">{localError || error}</p>}
-        <button className="affiliate-primary" type="submit" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'} <ArrowRight size={17} /></button>
-      </form> : <form className="affiliate-form" onSubmit={otpSent ? verifyCode : sendCode}>
-        {mode === 'create' && <label>Full name<input autoComplete="name" required value={name} onChange={(event) => setName(event.target.value)} placeholder="Your full name" /></label>}
-        <label>Mobile number<input type="tel" autoComplete="tel" required disabled={otpSent} value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="+91 98765 43210" /></label>
-        {otpSent && <label>One-time code<input inputMode="numeric" autoComplete="one-time-code" required value={otp} onChange={(event) => setOtp(event.target.value)} placeholder="Enter the code sent to your phone" /></label>}
-        {(localError || error) && <p className="affiliate-error" role="alert">{localError || error}</p>}
-        <button className="affiliate-primary" type="submit" disabled={busy || (otpSent && otp.trim().length < 4)}>
-          {busy ? (otpSent ? 'Verifying…' : 'Sending code…') : otpSent ? (mode === 'create' ? 'Verify & continue' : 'Verify & sign in') : 'Send verification code'} <ArrowRight size={17} />
-        </button>
-        {otpSent && <button className="affiliate-text-button" type="button" disabled={busy} onClick={() => { setOtpSent(false); setOtp('') }}>Use a different number</button>}
-      </form>}
-      <div className="affiliate-auth-steps">
-        <strong>How the affiliate application works</strong>
-        <span><i>1</i> Sign in or create your account with a phone verification code.</span>
-        <span><i>2</i> Complete your profile and accept the current programme documents. Your affiliate ID is issued after enrollment, not account creation.</span>
-        <span><i>3</i> If applications are open, choose an active package and complete checkout.</span>
-      </div>
-      <div className="affiliate-auth-note"><ShieldCheck size={16} /> No separate affiliate password is needed. This is separate from MLM membership; creating an account does not enrol you in MLM.</div>
-      <a className="affiliate-back-link" href="/">Return to member portal</a>
+      <aside className="affiliate-auth-story">
+        <a className="affiliate-logo" href="/" aria-label="AyurvaPro member portal"><img src={logo} alt="AyurvaPro" /><span>PARTNER PROGRAM</span></a>
+        <div className="affiliate-story-copy">
+          <p className="affiliate-story-kicker"><Sparkles size={14} /> YOUR AFFILIATE WORKSPACE</p>
+          <h1>Wellness grows better together.</h1>
+          <p>Build meaningful connections and grow with a wellness brand that puts people first.</p>
+        </div>
+        <div className="affiliate-auth-steps">
+          <strong>Your journey, made simple</strong>
+          <span><i>1</i> Create an account and verify your phone.</span>
+          <span><i>2</i> Complete your profile and programme documents.</span>
+          <span><i>3</i> Choose an active package and check out.</span>
+        </div>
+        <div className="affiliate-story-foot">
+          <ShieldCheck size={16} />
+          <span>Secure access, no separate affiliate password. Affiliate membership is separate from MLM.</span>
+        </div>
+      </aside>
+      <section className="affiliate-auth-panel">
+        <div className="affiliate-auth-heading">
+          <p className="affiliate-eyebrow">PARTNER PORTAL</p>
+          <h2>{isPhoneMode ? (mode === 'create' ? 'Create your account' : 'Sign in with your phone') : 'Welcome back'}</h2>
+          <p className="affiliate-muted">{isPhoneMode
+            ? (mode === 'create' ? 'Create an AyurvaPro account with your mobile number to continue.' : 'We’ll text a one-time code to sign you in securely.')
+            : 'Sign in with your AyurvaPro account, or create one with your mobile number.'}</p>
+        </div>
+        <div className="affiliate-auth-switch" role="group" aria-label="Choose sign-in option">
+          <button type="button" aria-pressed={mode === 'login'} className={mode === 'login' ? 'active' : ''} onClick={() => { setMode('login'); setLocalError(''); onClearError() }}>Email &amp; password</button>
+          <button type="button" aria-pressed={mode === 'create'} className={mode === 'create' ? 'active' : ''} onClick={() => { setMode('create'); setOtpSent(false); setOtp(''); setLocalError(''); onClearError() }}>Create account</button>
+          <button type="button" aria-pressed={mode === 'otp-login'} className={mode === 'otp-login' ? 'active' : ''} onClick={() => { setMode('otp-login'); setOtpSent(false); setOtp(''); setLocalError(''); onClearError() }}>Phone OTP</button>
+        </div>
+        {!isPhoneMode ? <form className="affiliate-form" onSubmit={(event) => { event.preventDefault(); onLogin(email.trim(), password) }}>
+          <label>Email address<input type="email" autoComplete="username" required value={email} onChange={(event) => setEmail(event.target.value)} placeholder="you@example.com" /></label>
+          <label>Password<input type="password" autoComplete="current-password" required value={password} onChange={(event) => setPassword(event.target.value)} placeholder="Your password" /></label>
+          {(localError || error) && <p className="affiliate-error" role="alert">{localError || error}</p>}
+          <button className="affiliate-primary" type="submit" disabled={busy}>{busy ? 'Signing in…' : 'Sign in'} <ArrowRight size={17} /></button>
+        </form> : <form className="affiliate-form" onSubmit={otpSent ? verifyCode : sendCode}>
+          {mode === 'create' && <label>Full name<input autoComplete="name" required value={name} onChange={(event) => setName(event.target.value)} placeholder="Your full name" /></label>}
+          <label>Mobile number<input type="tel" autoComplete="tel" required disabled={otpSent} value={phone} onChange={(event) => setPhone(event.target.value)} placeholder="+91 98765 43210" /></label>
+          {otpSent && <label>One-time code<input inputMode="numeric" autoComplete="one-time-code" required value={otp} onChange={(event) => setOtp(event.target.value)} placeholder="Enter the code sent to your phone" /></label>}
+          {(localError || error) && <p className="affiliate-error" role="alert">{localError || error}</p>}
+          <button className="affiliate-primary" type="submit" disabled={busy || (otpSent && otp.trim().length < 4)}>
+            {busy ? (otpSent ? 'Verifying…' : 'Sending code…') : otpSent ? (mode === 'create' ? 'Verify & continue' : 'Verify & sign in') : 'Send verification code'} <ArrowRight size={17} />
+          </button>
+          {otpSent && <button className="affiliate-text-button" type="button" disabled={busy} onClick={() => { setOtpSent(false); setOtp('') }}>Use a different number</button>}
+        </form>}
+        <a className="affiliate-back-link" href="/">Return to member portal <ArrowRight size={14} /></a>
+      </section>
     </section>
   </main>
 }
