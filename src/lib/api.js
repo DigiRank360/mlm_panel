@@ -46,6 +46,7 @@ export const api = {
   getAffiliateProfileStatus: () => request('/affiliate/profile/status'),
   getAffiliatePortalSettings: () => request('/affiliate/portal-settings'),
   getAffiliatePackages: () => request('/affiliate/packages'),
+  getAffiliateVideoCampaigns: () => request('/affiliate/video-campaigns'),
   enrollAffiliate: (details) => request('/affiliate/enroll', { method: 'POST', body: jsonBody(details) }),
   createAffiliatePackageOrder: (packageId, shippingAddress, idempotencyKey) => request('/affiliate/packages/orders', {
     method: 'POST',

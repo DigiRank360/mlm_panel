@@ -198,6 +198,7 @@ function AffiliatePortal() {
   const [status, setStatus] = useState(null)
   const [settings, setSettings] = useState(null)
   const [packages, setPackages] = useState([])
+  const [videoCampaigns, setVideoCampaigns] = useState([])
   const [dashboard, setDashboard] = useState(null)
   const [activity, setActivity] = useState(null)
   const [activityPage, setActivityPage] = useState(1)
@@ -220,6 +221,7 @@ function AffiliatePortal() {
   const [otpSent, setOtpSent] = useState(false)
   const [linkKind, setLinkKind] = useState('GENERAL')
   const [linkPackageId, setLinkPackageId] = useState('')
+  const [linkVideoCampaignId, setLinkVideoCampaignId] = useState('')
   const [kycForm, setKycForm] = useState({ legalName: '', dateOfBirth: '', pan: '', line1: '', line2: '', city: '', state: '', postalCode: '' })
   const [kycDocuments, setKycDocuments] = useState({ panDocument: null, identityDocument: null })
   const [kycConsent, setKycConsent] = useState(false)
@@ -279,6 +281,7 @@ function AffiliatePortal() {
         const requests = [
           ['dashboard', api.getAffiliateDashboard()],
           ['activity', api.getAffiliateActivity(1)],
+          ...(currentStatus.profile.status === 'ACTIVE' ? [['videoCampaigns', api.getAffiliateVideoCampaigns()]] : []),
           ['kyc', api.getAffiliateKycStatus()],
           ['payoutMethod', api.getAffiliatePayoutMethod()],
           ['payouts', api.getAffiliatePayouts()],
@@ -292,6 +295,7 @@ function AffiliatePortal() {
           if (result.status === 'fulfilled') {
             if (key === 'dashboard') setDashboard(result.value)
             if (key === 'activity') setActivity(result.value)
+            if (key === 'videoCampaigns') setVideoCampaigns(result.value)
             if (key === 'kyc') setKyc(result.value)
             if (key === 'payoutMethod') setPayoutMethod(result.value)
             if (key === 'payouts') setPayouts(result.value)
@@ -305,6 +309,7 @@ function AffiliatePortal() {
       } else {
         setDashboard(null)
         setActivity(null)
+        setVideoCampaigns([])
         setActivityPage(1)
         setKyc(null)
         setPayoutMethod(null)
@@ -405,6 +410,7 @@ function AffiliatePortal() {
       setPackages([])
       setDashboard(null)
       setActivity(null)
+      setVideoCampaigns([])
       setKyc(null)
       setPayoutMethod(null)
       setPayouts(null)
@@ -509,7 +515,12 @@ function AffiliatePortal() {
     setBusy(true)
     try {
       if (linkKind === 'PACKAGE' && !linkPackageId) throw new Error('Select an active package for this referral link.')
-      await api.createAffiliateLink({ kind: linkKind, ...(linkKind === 'PACKAGE' ? { packageId: linkPackageId } : {}) })
+      if (linkKind === 'VIDEO_CAMPAIGN' && !linkVideoCampaignId) throw new Error('Select an active video campaign.')
+      await api.createAffiliateLink({
+        kind: linkKind,
+        ...(linkKind === 'PACKAGE' ? { packageId: linkPackageId } : {}),
+        ...(linkKind === 'VIDEO_CAMPAIGN' ? { videoCampaignId: linkVideoCampaignId } : {}),
+      })
       await refresh(false)
       showToast('Referral link created.')
     } catch (error) {
@@ -775,16 +786,18 @@ function AffiliatePortal() {
 
   const renderLinks = () => <div className="affiliate-content-grid affiliate-links-layout">
     <section className="affiliate-card"><div className="affiliate-card-heading"><span className="affiliate-icon"><Link2 size={20} /></span><div><h2>Create a referral link</h2><p>Only active, server-configured link types are available.</p></div></div>
-      <form className="affiliate-form" onSubmit={createLink}><label>Link type<select value={linkKind} onChange={(event) => setLinkKind(event.target.value)}><option value="GENERAL">General</option><option value="PACKAGE">Package</option></select></label>
+      <form className="affiliate-form" onSubmit={createLink}><label>Link type<select value={linkKind} onChange={(event) => setLinkKind(event.target.value)}><option value="GENERAL">General</option><option value="PACKAGE">Package</option><option value="VIDEO_CAMPAIGN">Video campaign</option></select></label>
         {linkKind === 'PACKAGE' && <label>Active package<select required value={linkPackageId} onChange={(event) => setLinkPackageId(event.target.value)}><option value="">Select a package</option>{packages.map((item) => <option value={item._id} key={item._id}>{item.name} · v{item.version} · {item.durationMonths} months · {money(item.offerPrice)}</option>)}</select></label>}
-        <button className="affiliate-primary" disabled={busy || !dashboard || (linkKind === 'PACKAGE' && !linkPackageId)}>{busy ? 'Creating…' : 'Create link'} <ArrowRight size={16} /></button>
+        {linkKind === 'VIDEO_CAMPAIGN' && <label>Active video campaign<select required value={linkVideoCampaignId} onChange={(event) => setLinkVideoCampaignId(event.target.value)}><option value="">Select a campaign</option>{videoCampaigns.map((item) => <option value={item._id} key={item._id}>{item.name} · {money(item.rewardAmount)} · {item.minimumCompletionPercent}% watch</option>)}</select></label>}
+        {linkKind === 'VIDEO_CAMPAIGN' && <p className="affiliate-muted">Reward eligibility requires a signed-in account with a verified mobile number. Approved rewards are subject to admin review.</p>}
+        <button className="affiliate-primary" disabled={busy || !dashboard || (linkKind === 'PACKAGE' && !linkPackageId) || (linkKind === 'VIDEO_CAMPAIGN' && !linkVideoCampaignId)}>{busy ? 'Creating…' : 'Create link'} <ArrowRight size={16} /></button>
       </form>
     </section>
     <section className="affiliate-card"><div className="affiliate-card-title"><div><h2>Your referral links</h2><p>Share links are connected to the public referral tracking page.</p></div><Link2 size={18} /></div>
       {dashboard?.referralLinks?.map((link) => {
         const url = STOREFRONT_URL ? `${STOREFRONT_URL}/refer-and-earn?affiliate_ref=${encodeURIComponent(link.token)}` : ''
         return <div className="affiliate-link-row" key={link._id}>
-          <div><strong>{link.kind}{link.package?.name ? ` · ${link.package.name}` : ''}{link.campaign?.name ? ` · ${link.campaign.name}` : ''}</strong><small>{dateLabel(link.createdAt)}</small>
+          <div><strong>{link.kind}{link.package?.name ? ` · ${link.package.name}` : ''}{link.campaign?.name ? ` · ${link.campaign.name}` : ''}{link.videoCampaign?.name ? ` · ${link.videoCampaign.name}` : ''}</strong><small>{dateLabel(link.createdAt)}</small>
             {url ? <code>{url}</code> : <code>Token: {link.token}</code>}
           </div>
           {url ? <div className="affiliate-link-actions"><button className="affiliate-icon-button" aria-label="Copy referral link" onClick={async () => {
@@ -800,6 +813,7 @@ function AffiliatePortal() {
       })}
       {!dashboard?.referralLinks?.length && <p className="affiliate-empty">No referral links created yet.</p>}
       {sectionErrors.dashboard && <p className="affiliate-error" role="alert">{sectionErrors.dashboard}</p>}
+      {sectionErrors.videoCampaigns && <p className="affiliate-error" role="alert">{sectionErrors.videoCampaigns}</p>}
     </section>
   </div>
 
